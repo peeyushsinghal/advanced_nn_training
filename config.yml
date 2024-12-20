@@ -1,0 +1,42 @@
+# Training hyperparameters
+epochs: 100
+learning_rate: 0.01
+momentum: 0.9
+weight_decay: 0.0001
+batch_size: 128
+factor: 0.1
+patience: 2
+threshold: 0.005
+verbose: True
+
+# Model parameters
+dropout_rate: 0.1
+initial_channels: 8
+
+# Data parameters
+train_data_path: '../data'
+test_data_path: '../data'
+# normalize_mean: [0.49139968, 0.48215841, 0.44653091]
+# normalize_std: [0.24703223, 0.24348513, 0.26158784]
+
+normalize_mean: [0.4914, 0.4822, 0.4465]
+normalize_std: [0.2023, 0.1994, 0.2010]
+p: 0.5
+p_horizonal_flip: 0.9
+shift_limit_left: -0.1
+shift_limit_right: 0.1
+
+scale_limit_min: -0.2
+scale_limit_max: 0.2
+
+rotation_degrees: 7
+
+classes: ('plane', 'car', 'bird', 'cat', 'deer', 'dog', 'frog', 'horse', 'ship', 'truck')
+
+# Hardware settings
+num_workers: 1
+pin_memory: true
+
+
+#seed
+manual_seed: 1
